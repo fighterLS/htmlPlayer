@@ -15,6 +15,11 @@
 		C220E9471C4C9C2500FB6F81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C220E9451C4C9C2500FB6F81 /* LaunchScreen.storyboard */; };
 		C220E9521C4C9C2500FB6F81 /* htmlPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C220E9511C4C9C2500FB6F81 /* htmlPlayerTests.m */; };
 		C220E95D1C4C9C2500FB6F81 /* htmlPlayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C220E95C1C4C9C2500FB6F81 /* htmlPlayerUITests.m */; };
+		C2252E231C4FADA900FD12CF /* videotest.html in Resources */ = {isa = PBXBuildFile; fileRef = C2252E221C4FADA900FD12CF /* videotest.html */; };
+		C257F14D1C4E2BA00035F4B9 /* videotest.js in Resources */ = {isa = PBXBuildFile; fileRef = C257F14C1C4E2BA00035F4B9 /* videotest.js */; };
+		C26716AB1C60C52B008ADFFC /* FullViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C26716AA1C60C52B008ADFFC /* FullViewController.m */; };
+		C2995C4F1C5206A300A05907 /* VideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2995C4E1C5206A300A05907 /* VideoPlayerView.m */; };
+		C2ADD26D1C605EB700E1B5D5 /* VideoPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2ADD26C1C605EB700E1B5D5 /* VideoPlayerView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,13 @@
 		C220E9581C4C9C2500FB6F81 /* htmlPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = htmlPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C220E95C1C4C9C2500FB6F81 /* htmlPlayerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = htmlPlayerUITests.m; sourceTree = "<group>"; };
 		C220E95E1C4C9C2500FB6F81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2252E221C4FADA900FD12CF /* videotest.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = videotest.html; sourceTree = "<group>"; };
+		C257F14C1C4E2BA00035F4B9 /* videotest.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = videotest.js; sourceTree = "<group>"; };
+		C26716A91C60C52B008ADFFC /* FullViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullViewController.h; sourceTree = "<group>"; };
+		C26716AA1C60C52B008ADFFC /* FullViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullViewController.m; sourceTree = "<group>"; };
+		C2995C4D1C5206A300A05907 /* VideoPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayerView.h; sourceTree = "<group>"; };
+		C2995C4E1C5206A300A05907 /* VideoPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlayerView.m; sourceTree = "<group>"; };
+		C2ADD26C1C605EB700E1B5D5 /* VideoPlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoPlayerView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +113,7 @@
 		C220E9361C4C9C2400FB6F81 /* htmlPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				C2995C491C52065C00A05907 /* videoPlayer */,
 				C220E93A1C4C9C2500FB6F81 /* AppDelegate.h */,
 				C220E93B1C4C9C2500FB6F81 /* AppDelegate.m */,
 				C220E93D1C4C9C2500FB6F81 /* ViewController.h */,
@@ -117,6 +130,8 @@
 		C220E9371C4C9C2500FB6F81 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C257F14C1C4E2BA00035F4B9 /* videotest.js */,
+				C2252E221C4FADA900FD12CF /* videotest.html */,
 				C220E9381C4C9C2500FB6F81 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -138,6 +153,18 @@
 				C220E95E1C4C9C2500FB6F81 /* Info.plist */,
 			);
 			path = htmlPlayerUITests;
+			sourceTree = "<group>";
+		};
+		C2995C491C52065C00A05907 /* videoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				C26716A91C60C52B008ADFFC /* FullViewController.h */,
+				C26716AA1C60C52B008ADFFC /* FullViewController.m */,
+				C2995C4D1C5206A300A05907 /* VideoPlayerView.h */,
+				C2995C4E1C5206A300A05907 /* VideoPlayerView.m */,
+				C2ADD26C1C605EB700E1B5D5 /* VideoPlayerView.xib */,
+			);
+			name = videoPlayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,7 +272,10 @@
 			files = (
 				C220E9471C4C9C2500FB6F81 /* LaunchScreen.storyboard in Resources */,
 				C220E9441C4C9C2500FB6F81 /* Assets.xcassets in Resources */,
+				C257F14D1C4E2BA00035F4B9 /* videotest.js in Resources */,
 				C220E9421C4C9C2500FB6F81 /* Main.storyboard in Resources */,
+				C2ADD26D1C605EB700E1B5D5 /* VideoPlayerView.xib in Resources */,
+				C2252E231C4FADA900FD12CF /* videotest.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,7 +300,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2995C4F1C5206A300A05907 /* VideoPlayerView.m in Sources */,
 				C220E93F1C4C9C2500FB6F81 /* ViewController.m in Sources */,
+				C26716AB1C60C52B008ADFFC /* FullViewController.m in Sources */,
 				C220E93C1C4C9C2500FB6F81 /* AppDelegate.m in Sources */,
 				C220E9391C4C9C2500FB6F81 /* main.m in Sources */,
 			);
@@ -414,7 +446,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = htmlPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/htmlPlayer/UUChatTableView/OtherResources/VoiceLib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sumavision.htmlPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -425,7 +462,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = htmlPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/htmlPlayer/UUChatTableView/OtherResources/VoiceLib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sumavision.htmlPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -498,6 +540,7 @@
 				C220E9631C4C9C2500FB6F81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C220E9641C4C9C2500FB6F81 /* Build configuration list for PBXNativeTarget "htmlPlayerTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +549,7 @@
 				C220E9661C4C9C2500FB6F81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C220E9671C4C9C2500FB6F81 /* Build configuration list for PBXNativeTarget "htmlPlayerUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +558,7 @@
 				C220E9691C4C9C2500FB6F81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

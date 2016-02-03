@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "VideoPlayerView.h"
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
 
+@property (nonatomic, strong) VideoPlayerView *videoView;
 @end
 

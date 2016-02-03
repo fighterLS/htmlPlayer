@@ -313,9 +313,6 @@
     }else if (panGesture.state == UIGestureRecognizerStateEnded ||panGesture.state == UIGestureRecognizerStateCancelled|| panGesture.state == UIGestureRecognizerStateFailed || panGesture.state == UIGestureRecognizerStatePossible ||panGesture.state == UIGestureRecognizerStatePossible) {
         translationPoint = CGPointZero;
         [self scrubberDidEnd:self.videoScrubberSlider];
-    }else {
-     //   translationPoint = CGPointZero;
-       // [self scrubberDidEnd:self.videoScrubberSlider];
     }
     
 }

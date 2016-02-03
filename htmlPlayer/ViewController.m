@@ -28,9 +28,7 @@
 {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"videotest" ofType:@"js"];
     NSString *videoHandlerString = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
-  
     if (videoHandlerString) {
-   
         [webView stringByEvaluatingJavaScriptFromString:videoHandlerString];
     }
 }
@@ -56,19 +54,23 @@
     return YES;
 }
 
-
--(void)plauerViewWithUrl:(NSString *)Url
+-(VideoPlayerView *)videoView
 {
     if (_videoView==nil) {
         _videoView=[[[NSBundle mainBundle] loadNibNamed:@"VideoPlayerView" owner:self options:nil] lastObject];
         _videoView.frame = CGRectMake(0, 20, kScreenWidth, kScaleFrom_iPhone5_Desgin(180));
         _videoView.controlViewController=self;
     }
-    [_videoView startLoadPlayerVideoWithUrl:Url];
+    return _videoView;
+}
+-(void)plauerViewWithUrl:(NSString *)Url
+{
+    [self.videoView startLoadPlayerVideoWithUrl:Url];
     if (![self isExistSubView]) {
-     [self.view addSubview:_videoView];
+     [self.view addSubview:self.videoView];
     }
 }
+
 -(BOOL)isExistSubView
 {
     for (UIView *subView in self.view.subviews) {
